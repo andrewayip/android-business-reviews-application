@@ -6,10 +6,11 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/Icon_Image"
         android:layout_width="202dp"
         android:layout_height="218dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/content_landing_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,11 +24,11 @@
         android:layout_marginTop="28dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/app_description"
-        android:textColor="#070707"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/Icon_Image" />
 
     <LinearLayout
         android:layout_width="320dp"
@@ -46,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@string/content_food_btn"
             app:srcCompat="@drawable/food_icon" />
 
         <ImageButton
@@ -53,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@string/content_hotel_btn"
             app:srcCompat="@drawable/hotel_icon" />
 
         <ImageButton
@@ -60,6 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@string/content_beauty_btn"
             app:srcCompat="@drawable/beauty_icon" />
     </LinearLayout>
 
@@ -79,6 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@string/content_bars_btn"
             app:srcCompat="@drawable/bar_icon" />
 
         <ImageButton
@@ -86,6 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@string/content_fitness_btn"
             app:srcCompat="@drawable/fitness_icon" />
 
         <ImageButton
@@ -93,6 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@string/content_entertainment_btn"
             app:srcCompat="@drawable/entertainment_icon" />
     </LinearLayout>
 
@@ -102,6 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="@string/app_directions"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
