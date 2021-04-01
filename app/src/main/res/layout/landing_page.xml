@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Icon_Image"
+        android:layout_width="202dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/content_landing_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ur_logo" />
+
+    <TextView
+        android:id="@+id/appDescriptionTxtV"
+        android:layout_width="281dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/app_description"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Icon_Image" />
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.044">
+
+        <ImageButton
+            android:id="@+id/foodBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_food_btn"
+            app:srcCompat="@drawable/food_icon" />
+
+        <ImageButton
+            android:id="@+id/hotelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_hotel_btn"
+            app:srcCompat="@drawable/hotel_icon" />
+
+        <ImageButton
+            android:id="@+id/beautyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_beauty_btn"
+            app:srcCompat="@drawable/beauty_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="316dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appDirectionsTxtV">
+
+        <ImageButton
+            android:id="@+id/barsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_bars_btn"
+            app:srcCompat="@drawable/bar_icon" />
+
+        <ImageButton
+            android:id="@+id/fitnessBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_fitness_btn"
+            app:srcCompat="@drawable/fitness_icon" />
+
+        <ImageButton
+            android:id="@+id/entertainmentBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_entertainment_btn"
+            app:srcCompat="@drawable/entertainment_icon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/appDirectionsTxtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/app_directions"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appDescriptionTxtV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

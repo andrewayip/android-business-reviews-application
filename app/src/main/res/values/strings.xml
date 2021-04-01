@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">android_team_project</string>
+    <string name="app_description">Our app is designed to help the Redland’s community find local businesses that satisfy their customer’s needs.</string>
+    <string name="fitness">fitness</string>
+    <string name="restaurants">restaurants</string>
+    <string name="bars">bars</string>
+    <string name="hotels">hotels</string>
+    <string name="entertainment">entertainment</string>
+    <string name="beauty">beauty</string>
+    <string name="app_directions">Select a service from the buttons below.</string>
+    <string name = "content_landing_image">Landing Page Icon Picture</string>
+    <string name = "content_food_btn">Food Button</string>
+    <string name = "content_bars_btn">Bars Button</string>
+    <string name = "content_hotel_btn">Hotel Button</string>
+    <string name = "content_entertainment_btn">Entertainment Button</string>
+    <string name = "content_fitness_btn">Fitness Button</string>
+    <string name = "content_beauty_btn">Beauty Button</string>
 </resources>
