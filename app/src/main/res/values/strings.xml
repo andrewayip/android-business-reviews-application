@@ -15,4 +15,12 @@
     <string name = "content_entertainment_btn">Entertainment Button</string>
     <string name = "content_fitness_btn">Fitness Button</string>
     <string name = "content_beauty_btn">Beauty Button</string>
+    <string name="results_title">Results Title</string>
+    <string name="results_image">Results Image</string>
+    <string name="results_description">Description Text</string>
+    <string name="results_gps_button">Show me Where!</string>
+    <string name="results_comments">Comments Section</string>
+    <string name="results_comments_title">Title</string>
+    <string name="results_comments_body">Comment Body</string>
+    <string name="results_comments_image">User Profile Image</string>
 </resources>
