@@ -27,7 +27,7 @@ public class Hotel extends Location{
         super.setReview(review);
     }
     public void setAddress (String address){
-        super.setReview(address);
+        super.setAddress(address);
     }
     public void setImageID (String imageID){
         super.setImageID(imageID);

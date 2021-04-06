@@ -64,7 +64,7 @@ public class Location {
         return address;
     }
 
-    public void setAddress(String review) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
