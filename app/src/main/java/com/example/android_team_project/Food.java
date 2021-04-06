@@ -7,8 +7,8 @@ public class Food extends Location{
         super(); // default constructor from Location class
     }
 
-    public Food (String name, String desc, String price, String review){
-        super(name, desc, price, review);
+    public Food (String name, String desc, String address, String price, String review, String imageID){
+        super(name, desc, address, price, review, imageID);
     }
 
     public void setName (String name){
@@ -25,6 +25,12 @@ public class Food extends Location{
 
     public void setReview (String review){
         super.setReview(review);
+    }
+    public void setAddress (String address){
+        super.setReview(address);
+    }
+    public void setImageID (String imageID){
+        super.setImageID(imageID);
     }
 
 }
