@@ -2,7 +2,6 @@ package com.example.android_team_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
