@@ -116,9 +116,25 @@ public class MainActivity extends AppCompatActivity {
 
 
                                         //************************ GYM CATEGORY ***********************
+        //Anytime Fitness
         allLocations.add(new Gym("Anytime Fitness", "workout anytime", "", "$", "good gym", ""));
         allGym.put("Anytime Fitness", new Gym("Anytime Fitness", "workout anytime", "",  "$", "good gym" ,""));
 
+        //Fitness 19
+        allLocations.add(new Gym("Fitness 19", "Classic gym with monthly memberships.", "34.069138486366654, -117.13994368503073", "$$", "Good place to workout, awesome staff keeps the place clean even when it’s busy.", ""));
+        allGym.put("Fitness 19", new Gym("Fitness 19", "Classic gym with monthly memberships.", "34.069138486366654, -117.13994368503073", "$$", "Good place to workout, awesome staff keeps the place clean even when it’s busy.", ""));
+
+        //Flowstone
+        allLocations.add(new Gym("Flowstone", "Inland Empire’s first modern indoor bouldering facility, located in historic Redlands, California. Climbing inspired, community driven.", "34.05588150502014, -117.20484672366848", "$$", "Quality climbing, fun environment, great staff, and just good vibes all around.", ""));
+        allGym.put("Flowstone", new Gym("Flowstone", "Inland Empire’s first modern indoor bouldering facility, located in historic Redlands, California. Climbing inspired, community driven.", "34.05588150502014, -117.20484672366848", "$$", "Quality climbing, fun environment, great staff, and just good vibes all around.", ""));
+
+        //Vasa The Yoga Studio
+        allLocations.add(new Gym("Vasa The Yoga Studio", "Yoga studio in Redlands, CA.", "34.0479348094893, -117.17104233106684", "$$$", "I found Vasa the Yoga Studio through ClassPass and it is by far my favorite workout in the city. Extremely relaxing environment, and the classes are fast paced so you don't get bored.", ""));
+        allGym.put("Vasa The Yoga Studio", new Gym("Vasa The Yoga Studio", "Yoga studio in Redlands, CA.", "34.0479348094893, -117.17104233106684", "$$$", "I found Vasa the Yoga Studio through ClassPass and it is by far my favorite workout in the city. Extremely relaxing environment, and the classes are fast paced so you don't get bored.", ""));
+
+        //Ultimate Kickboxing & Fitness
+        allLocations.add(new Gym("Ultimate Kickboxing & Fitness", "At Ultimate Kickboxing & Fitness, you will experience the ultimate workout in both cardiovascular and strength training", "34.058774483844964, -117.19922215435123", "$$$", "The staff helped me set up, modify my workout, and was very encouraging.", ""));
+        allGym.put("Ultimate Kickboxing & Fitness", new Gym("Ultimate Kickboxing & Fitness", "At Ultimate Kickboxing & Fitness, you will experience the ultimate workout in both cardiovascular and strength training", "34.058774483844964, -117.19922215435123", "$$$", "The staff helped me set up, modify my workout, and was very encouraging.", ""));
 
                                          //************************ HOTEL CATEGORY***********************
         allLocations.add(new Hotel("Country Inn & Suites by Radisson, San Bernardino", "hotel place", "", "$", "comfy eh", ""));
