@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-
+ /*
     // UI REFERENCES
     ImageButton barsBtn;
     ImageButton beautyBtn;
@@ -17,18 +18,37 @@ public class MainActivity extends AppCompatActivity {
     ImageButton foodBtn;
     ImageButton fitnessBtn;
     ImageButton hotelBtn;
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_page);
-
+/*
         barsBtn = (ImageButton) findViewById(R.id.barsBtn);
         beautyBtn = (ImageButton) findViewById(R.id.beautyBtn);
         entertainmentBtn = (ImageButton) findViewById(R.id.entertainmentBtn);
         foodBtn = (ImageButton) findViewById(R.id.foodBtn);
         fitnessBtn = (ImageButton) findViewById(R.id.fitnessBtn);
         hotelBtn = (ImageButton) findViewById(R.id.hotelBtn);
+*/
 
+    }
+    public void barsOption(View view){
+      //Insert Intent stuff here
+    }
+    public void fitnessOption(View view){
+        //Insert Intent stuff here
+    }
+    public void entertainmentOption(View view){
+        //Insert Intent stuff here
+    }
+    public void foodOption(View view){
+        //Insert Intent stuff here
+    }
+    public void hotelOption(View view){
+        //Insert Intent stuff here
+    }
+    public void beautyOption(View view){
+        //Insert Intent stuff here
     }
 }
