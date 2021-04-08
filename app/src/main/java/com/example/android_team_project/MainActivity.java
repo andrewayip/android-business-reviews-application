@@ -148,8 +148,25 @@ public class MainActivity extends AppCompatActivity {
         allGym.put("Ultimate Kickboxing & Fitness", new Gym("Ultimate Kickboxing & Fitness", "At Ultimate Kickboxing & Fitness, you will experience the ultimate workout in both cardiovascular and strength training", "34.058774483844964, -117.19922215435123", "$$$", "The staff helped me set up, modify my workout, and was very encouraging.", ""));
 
                                          //************************ HOTEL CATEGORY***********************
-        allLocations.add(new Hotel("Country Inn & Suites by Radisson, San Bernardino", "hotel place", "", "$", "comfy eh", ""));
-        allHotels.put("Country Inn & Suites by Radisson, San Bernardino", new Hotel("Country Inn & Suites by Radisson, San Bernardino", "hotel place", "", "$", "comfy eh", ""));
+        //Ayres Hotel
+        allLocations.add(new Hotel("Ayres Hotel", "Family-run, Mediterranean-inspired property with free breakfast, Wi-Fi & happy hour, plus a pool.","34.06251795169684, -117.19706452898386","$$","Guests appreciated the friendly, professional staff · Guests spoke highly of management & reception · Guests enjoyed the pool",""));
+        allHotels.put("Ayres Hotel", new Hotel("Ayres Hotel", "Family-run, Mediterranean-inspired property with free breakfast, Wi-Fi & happy hour, plus a pool.","34.06251795169684, -117.19706452898386","$$","Guests appreciated the friendly, professional staff · Guests spoke highly of management & reception · Guests enjoyed the pool",""));
+
+        //Dynasty Suites
+        allLocations.add(new Hotel("Dynasty Suites","Low-key hotel offering traditional rooms & suites, some with whirlpool tubs, plus free breakfast.","34.062716275081286, -117.20147396044503","$$","Guests liked the clean rooms, though some commented they were dated · Guests appreciated the bathrooms",""));
+        allHotels.put("Dynasty Suites", new Hotel("Dynasty Suites","Low-key hotel offering traditional rooms & suites, some with whirlpool tubs, plus free breakfast.","34.062716275081286, -117.20147396044503","$$","Guests liked the clean rooms, though some commented they were dated · Guests appreciated the bathrooms",""));
+
+        //Country Inn & Suites by Radisson
+        allLocations.add(new Hotel("Country Inn & Suites by Radisson","Warm rooms & suites in a casual hotel with free hot breakfast & Wi-Fi, plus an outdoor pool.","34.06600500138148, -117.20937285434796","$$","Guests appreciated the friendly staff · Guests spoke highly of the reception staff, though some said management could be improved",""));
+        allHotels.put("Country Inn & Suites by Radisson", new Hotel("Country Inn & Suites by Radisson","Warm rooms & suites in a casual hotel with free hot breakfast & Wi-Fi, plus an outdoor pool.","34.06600500138148, -117.20937285434796","$$","Guests appreciated the friendly staff · Guests spoke highly of the reception staff, though some said management could be improved",""));
+
+        //Comfort Suites
+        allLocations.add(new Hotel("Comfort Suites","Casual suites in an unpretentious hotel offering free breakfast, plus an indoor pool & a gym.","34.064186655496705, -117.20061520832236","$$","Guests appreciated the friendly staff · Guests enjoyed the pool · Guests spoke highly of the reception staff",""));
+        allHotels.put("Comfort Suites", new Hotel("Comfort Suites","Casual suites in an unpretentious hotel offering free breakfast, plus an indoor pool & a gym.","34.064186655496705, -117.20061520832236","$$","Guests appreciated the friendly staff · Guests enjoyed the pool · Guests spoke highly of the reception staff",""));
+
+        //WoodSpring Suites
+        allLocations.add(new Hotel("WoodSpring Suites","Informal all-suite hotel offering parking, plus streamlined quarters featuring kitchens.","34.06873468724912, -117.21256351571523","$$","I thought the facility was very clean and had a great set up.",""));
+        allHotels.put("WoodSpring Suites", new Hotel("WoodSpring Suites","Informal all-suite hotel offering parking, plus streamlined quarters featuring kitchens.","34.06873468724912, -117.21256351571523","$$","I thought the facility was very clean and had a great set up.",""));
 
 
     }
