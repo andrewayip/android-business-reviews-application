@@ -26,18 +26,33 @@ public class MainActivity extends AppCompatActivity {
       startActivity(launchReport);
     }
     public void fitnessOption(View view){
-        //Insert Intent stuff here
+        selectedCategory = "fitness";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
     }
     public void entertainmentOption(View view){
-        //Insert Intent stuff here
+        selectedCategory = "entertainment";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
     }
     public void foodOption(View view){
-        //Insert Intent stuff here
+        selectedCategory = "food";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
     }
     public void hotelOption(View view){
-        //Insert Intent stuff here
+        selectedCategory = "hotel";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
     }
     public void beautyOption(View view){
-        //Insert Intent stuff here
+        selectedCategory = "beauty";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
     }
 }

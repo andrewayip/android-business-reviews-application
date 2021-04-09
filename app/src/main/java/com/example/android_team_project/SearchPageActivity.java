@@ -32,6 +32,7 @@ public class SearchPageActivity extends Activity {
         String category;
         category = intent.getStringExtra("category"); // PASSED FROM MAIN ACTIVITY FILE
 
+        //Checking to see what category the user selects
         System.out.println("this is the selected category: " + category);
 
     }
