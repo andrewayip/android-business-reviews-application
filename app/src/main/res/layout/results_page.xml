@@ -22,7 +22,7 @@
         android:id="@+id/resultsDescriptionTextV"
         android:layout_width="216dp"
         android:layout_height="137dp"
-        android:padding="10"
+        android:padding="10dp"
         android:text="@string/results_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

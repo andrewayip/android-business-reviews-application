@@ -30,7 +30,7 @@
             android:id="@+id/bodyTxtV"
             android:layout_width="match_parent"
             android:layout_height="98dp"
-            android:padding="10"
+            android:padding="10dp"
             android:text="@string/results_comments_body" />
     </LinearLayout>
 </LinearLayout>
