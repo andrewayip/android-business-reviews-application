@@ -196,4 +196,6 @@ public class SearchPageActivity extends Activity {
         
     }
 
+    // NEED TO IMPLEMENT CATEGORIZATION BASED ON SELECTION OF CATEGORY
+
 }
