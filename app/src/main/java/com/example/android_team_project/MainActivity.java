@@ -5,10 +5,15 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    // REFERENCES
+    String selectedCategory;
     // HOLDS ALL LOCATIONS (WE CAN SWITCH TO A HASH MAP
     // WE'LL USE THIS WHEN THE USER WANTS TO SEARCH FOR ITEMS
     // MAYBE CAN CHANGE IT TO KEY: NAME OF LOCATION, VALUE: LOCATION
@@ -167,7 +172,45 @@ public class MainActivity extends AppCompatActivity {
         //WoodSpring Suites
         allLocations.add(new Hotel("WoodSpring Suites","Informal all-suite hotel offering parking, plus streamlined quarters featuring kitchens.","34.06873468724912, -117.21256351571523","$$","I thought the facility was very clean and had a great set up.","woodspring_suites.jpg"));
         allHotels.put("WoodSpring Suites", new Hotel("WoodSpring Suites","Informal all-suite hotel offering parking, plus streamlined quarters featuring kitchens.","34.06873468724912, -117.21256351571523","$$","I thought the facility was very clean and had a great set up.","woodspring_suites.jpg"));
+      
+        // REFERENCES
+        selectedCategory = "";
 
-
+    }
+    public void barsOption(View view){
+      selectedCategory = "bars";
+      Intent launchReport = new Intent(this, SearchPageActivity.class);
+      launchReport.putExtra("category", selectedCategory);
+      startActivity(launchReport);
+    }
+    public void fitnessOption(View view){
+        selectedCategory = "fitness";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
+    }
+    public void entertainmentOption(View view){
+        selectedCategory = "entertainment";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
+    }
+    public void foodOption(View view){
+        selectedCategory = "food";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
+    }
+    public void hotelOption(View view){
+        selectedCategory = "hotel";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
+    }
+    public void beautyOption(View view){
+        selectedCategory = "beauty";
+        Intent launchReport = new Intent(this, SearchPageActivity.class);
+        launchReport.putExtra("category", selectedCategory);
+        startActivity(launchReport);
     }
 }

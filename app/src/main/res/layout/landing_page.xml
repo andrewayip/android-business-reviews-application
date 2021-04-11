@@ -48,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@string/content_food_btn"
+            android:onClick="foodOption"
             app:srcCompat="@drawable/food_icon" />
 
         <ImageButton
@@ -56,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@string/content_hotel_btn"
+            android:onClick="hotelOption"
             app:srcCompat="@drawable/hotel_icon" />
 
         <ImageButton
@@ -64,6 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@string/content_beauty_btn"
+            android:onClick="beautyOption"
             app:srcCompat="@drawable/beauty_icon" />
     </LinearLayout>
 
@@ -84,6 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@string/content_bars_btn"
+            android:onClick="barsOption"
             app:srcCompat="@drawable/bar_icon" />
 
         <ImageButton
@@ -92,6 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@string/content_fitness_btn"
+            android:onClick="fitnessOption"
             app:srcCompat="@drawable/fitness_icon" />
 
         <ImageButton
@@ -100,6 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@string/content_entertainment_btn"
+            android:onClick="entertainmentOption"
             app:srcCompat="@drawable/entertainment_icon" />
     </LinearLayout>
 
