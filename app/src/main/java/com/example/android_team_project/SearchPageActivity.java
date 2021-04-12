@@ -1,6 +1,7 @@
 package com.example.android_team_project;
 
 import android.app.Activity;
+import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -193,7 +194,13 @@ public class SearchPageActivity extends Activity {
 
         //Checking to see what category the user selects
         System.out.println("this is the selected category: " + category);
-        
+
+      /* This is an example of how to get the query
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            doMySearch(query);
+
+      */
     }
 
     // NEED TO IMPLEMENT CATEGORIZATION BASED ON SELECTION OF CATEGORY
