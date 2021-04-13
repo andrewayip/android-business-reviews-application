@@ -9,6 +9,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.view.View;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,13 +28,13 @@ public class SearchPageActivity extends Activity {
 
     ArrayList<Location> allLocations;
 
-    // MAP OF EACH CATEGORY (key: nameOfLocation (unique), value: actualLocation)
-    Map<String, Bar> allBars;
-    Map<String, Beauty> allBeauty;
-    Map<String, Entertainment> allEntertainment;
-    Map<String, Food> allFood;
-    Map<String, Gym> allGym;
-    Map<String, Hotel> allHotels;
+    // ARRAYLIST OF EACH CATEGORY TYPE
+    ArrayList<Bar> allBars;
+    ArrayList<Beauty> allBeauty;
+    ArrayList<Entertainment> allEntertainment;
+    ArrayList<Food> allFood;
+    ArrayList<Gym> allGym;
+    ArrayList<Hotel> allHotels;
 
     // NOW BASED ON WHAT CATEGORY WE SELECT WE DETERMINE WHICH HASHMAP TO DISPLAY (BASED ON CATEGORY)
 
@@ -44,12 +45,12 @@ public class SearchPageActivity extends Activity {
 
         // INITIALIZING DATA STRUCTURES
         allLocations = new ArrayList<Location>();
-        allBars = new HashMap<>();
-        allBeauty = new HashMap<>();
-        allEntertainment = new HashMap<>();
-        allFood = new HashMap<>();
-        allGym = new HashMap<>();
-        allHotels = new HashMap<>();
+        allBars = new ArrayList<>();
+        allBeauty = new ArrayList<>();
+        allEntertainment = new ArrayList<>();
+        allFood = new ArrayList<>();
+        allGym = new ArrayList<>();
+        allHotels = new ArrayList<>();
 
         //************************ ADD LOCATIONS TO PROPER DATA STRUCTURES ***********************
 
