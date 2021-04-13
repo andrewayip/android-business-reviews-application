@@ -29,12 +29,16 @@ public class SearchPageActivity extends Activity {
     ArrayList<Location> allLocations;
 
     // ARRAYLIST OF EACH CATEGORY TYPE
-    ArrayList<Bar> allBars;
-    ArrayList<Beauty> allBeauty;
-    ArrayList<Entertainment> allEntertainment;
-    ArrayList<Food> allFood;
-    ArrayList<Gym> allGym;
-    ArrayList<Hotel> allHotels;
+    ArrayList<Location> allBars;
+    ArrayList<Location> allBeauty;
+    ArrayList<Location> allEntertainment;
+    ArrayList<Location> allFood;
+    ArrayList<Location> allGym;
+    ArrayList<Location> allHotels;
+
+
+    //INITIALIZE CATEGORY ADAPTER
+    CategoryAdapter categoryAdapter;
 
     // NOW BASED ON WHAT CATEGORY WE SELECT WE DETERMINE WHICH HASHMAP TO DISPLAY (BASED ON CATEGORY)
 
@@ -192,6 +196,30 @@ public class SearchPageActivity extends Activity {
         // RETRIEVE CATEGORY DATA FROM MAIN ACTIVITY
         String category;
         category = intent.getStringExtra("category"); // PASSED FROM MAIN ACTIVITY FILE
+
+        //PASSES BUSINESS CATEGORY INTO CATEGORY ADAPTER
+        switch (category){
+            case "allBars":
+                categoryAdapter = new CategoryAdapter(this, allBars);
+                break;
+            case "allBeauty":
+                categoryAdapter = new CategoryAdapter(this, allBeauty);
+                break;
+            case "allEntertainment":
+                categoryAdapter = new CategoryAdapter(this, allEntertainment);
+                break;
+            case "allFood":
+                categoryAdapter = new CategoryAdapter(this, allFood);
+                break;
+            case "allHotels":
+                categoryAdapter = new CategoryAdapter(this, allHotels);
+                break;
+        }
+
+        //MAKES VIEW
+        ListView listView = findViewById(R.id.listview);
+
+        listView.setAdapter(categoryAdapter);
 
         //Checking to see what category the user selects
         System.out.println("this is the selected category: " + category);
