@@ -25,37 +25,37 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void barsOption(View view){
-      selectedCategory = "bars";
+      selectedCategory = "allBars";
       Intent launchReport = new Intent(this, SearchPageActivity.class);
       launchReport.putExtra("category", selectedCategory);
       startActivity(launchReport);
     }
     public void fitnessOption(View view){
-        selectedCategory = "fitness";
+        selectedCategory = "allBeauty";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
     public void entertainmentOption(View view){
-        selectedCategory = "entertainment";
+        selectedCategory = "allEntertainment";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
     public void foodOption(View view){
-        selectedCategory = "food";
+        selectedCategory = "allFood";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
     public void hotelOption(View view){
-        selectedCategory = "hotel";
+        selectedCategory = "allGym";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
     public void beautyOption(View view){
-        selectedCategory = "beauty";
+        selectedCategory = "allHotels";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
