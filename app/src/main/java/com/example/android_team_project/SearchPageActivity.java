@@ -1,18 +1,14 @@
 package com.example.android_team_project;
 
 import android.app.Activity;
-import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.view.View;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class SearchPageActivity extends Activity {
 
@@ -35,6 +31,9 @@ public class SearchPageActivity extends Activity {
     ArrayList<Location> allFood;
     ArrayList<Location> allGym;
     ArrayList<Location> allHotels;
+
+    // SELECTED ARRAY LIST
+    ArrayList<Location> selectedCategoryList;
 
 
     //INITIALIZE CATEGORY ADAPTER
@@ -201,21 +200,27 @@ public class SearchPageActivity extends Activity {
         switch (category){
             case "allBars":
                 categoryAdapter = new CategoryAdapter(this, allBars);
+                selectedCategoryList = allBars;
                 break;
             case "allBeauty":
                 categoryAdapter = new CategoryAdapter(this, allBeauty);
+                selectedCategoryList = allBeauty;
                 break;
             case "allEntertainment":
                 categoryAdapter = new CategoryAdapter(this, allEntertainment);
+                selectedCategoryList = allEntertainment;
                 break;
             case "allFood":
                 categoryAdapter = new CategoryAdapter(this, allFood);
+                selectedCategoryList = allFood;
                 break;
             case "allHotels":
                 categoryAdapter = new CategoryAdapter(this, allHotels);
+                selectedCategoryList = allHotels;
                 break;
             case "allGym":
                 categoryAdapter = new CategoryAdapter(this, allGym);
+                selectedCategoryList = allGym;
                 break;
         }
 
@@ -223,6 +228,20 @@ public class SearchPageActivity extends Activity {
         ListView listView = findViewById(R.id.listview);
 
         listView.setAdapter(categoryAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View v, int position,
+                                    long arg3)
+            {
+                // ADD AN ITEM LISTENER FOR EACH LIST VIEW ITEM
+                Intent launchReport = new Intent(v.getContext(), ResultPageActivity.class);
+                launchReport.putExtra("item selected", selectedCategoryList.get(position).getName());
+                startActivity(launchReport);
+
+            }
+        });
 
         //Checking to see what category the user selects
         System.out.println("this is the selected category: " + category);
