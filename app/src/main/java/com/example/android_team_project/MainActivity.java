@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
       startActivity(launchReport);
     }
     public void fitnessOption(View view){
-        selectedCategory = "allBeauty";
+        selectedCategory = "allGym";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
@@ -49,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(launchReport);
     }
     public void hotelOption(View view){
-        selectedCategory = "allGym";
+        selectedCategory = "allHotels";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
     public void beautyOption(View view){
-        selectedCategory = "allHotels";
+        selectedCategory = "allBeauty";
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);

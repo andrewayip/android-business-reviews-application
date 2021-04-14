@@ -214,6 +214,9 @@ public class SearchPageActivity extends Activity {
             case "allHotels":
                 categoryAdapter = new CategoryAdapter(this, allHotels);
                 break;
+            case "allGym":
+                categoryAdapter = new CategoryAdapter(this, allGym);
+                break;
         }
 
         //MAKES VIEW
