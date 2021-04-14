@@ -3,10 +3,16 @@ package com.example.android_team_project;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.view.View;
+
+import androidx.core.view.MenuItemCompat;
+
 import java.util.ArrayList;
 
 
@@ -54,6 +60,9 @@ public class SearchPageActivity extends Activity {
         allFood = new ArrayList<>();
         allGym = new ArrayList<>();
         allHotels = new ArrayList<>();
+
+        // UI REFERENCES
+        listView = (ListView) findViewById(R.id.listview);
 
         //************************ ADD LOCATIONS TO PROPER DATA STRUCTURES ***********************
 
@@ -185,10 +194,6 @@ public class SearchPageActivity extends Activity {
         allLocations.add(new Hotel("WoodSpring Suites","Informal all-suite hotel offering parking, plus streamlined quarters featuring kitchens.","34.06873468724912, -117.21256351571523","$$","I thought the facility was very clean and had a great set up.","woodspring_suites.jpg"));
         allHotels.add(new Hotel("WoodSpring Suites","Informal all-suite hotel offering parking, plus streamlined quarters featuring kitchens.","34.06873468724912, -117.21256351571523","$$","I thought the facility was very clean and had a great set up.","woodspring_suites.jpg"));
 
-        // UI REFERENCES
-        searchView = (SearchView) findViewById(R.id.simpleSearchView);
-        listView = (ListView) findViewById(R.id.listview);
-
         // PASS DATA FROM ONE CLASS TO ANOTHER
         Intent intent = getIntent();
 
@@ -252,6 +257,35 @@ public class SearchPageActivity extends Activity {
             doMySearch(query);
 
       */
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        //Initialize menu inflater
+        MenuInflater menuInflater = getMenuInflater();
+        //Inflate menu
+        menuInflater.inflate(R.menu.menu_search,menu);
+        //Initialize menu item
+        MenuItem menuItem = menu.findItem(R.id.search_view);
+        // Initialize search view
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // filter array list
+                categoryAdapter.getFilter().filter(newText);
+
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+
     }
 
     // NEED TO IMPLEMENT CATEGORIZATION BASED ON SELECTION OF CATEGORY
