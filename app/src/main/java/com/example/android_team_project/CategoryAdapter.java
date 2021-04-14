@@ -22,7 +22,7 @@ public class CategoryAdapter extends ArrayAdapter<Location> {
             business = LayoutInflater.from(getContext()).inflate(R.layout.search_item,parent, false);
         }
 
-        TextView business_name = business.findViewById(R.id.search_Buisness_name);
+        TextView business_name = business.findViewById(R.id.search_business_name);
         TextView business_description = business.findViewById(R.id.search_description);
 
         business_name.setText(currentBusiness.getName());
