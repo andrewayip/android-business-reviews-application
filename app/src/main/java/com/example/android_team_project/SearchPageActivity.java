@@ -19,7 +19,6 @@ import java.util.ArrayList;
 public class SearchPageActivity extends Activity {
 
     // DATA MEMBERS
-    SearchView searchView;
     ListView listView;
 
     // STORING DATA
@@ -259,34 +258,7 @@ public class SearchPageActivity extends Activity {
       */
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        //Initialize menu inflater
-        MenuInflater menuInflater = getMenuInflater();
-        //Inflate menu
-        menuInflater.inflate(R.menu.menu_search,menu);
-        //Initialize menu item
-        MenuItem menuItem = menu.findItem(R.id.search_view);
-        // Initialize search view
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                // filter array list
-                categoryAdapter.getFilter().filter(newText);
-
-                return false;
-            }
-        });
-        return super.onCreateOptionsMenu(menu);
-
-    }
 
     // NEED TO IMPLEMENT CATEGORIZATION BASED ON SELECTION OF CATEGORY
 

@@ -1,19 +1,26 @@
 package com.example.android_team_project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuItemCompat;
+
 import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.SearchView;
 
 
 public class MainActivity extends AppCompatActivity {
 
     // REFERENCES
     String selectedCategory;
+    SearchPageActivity searchPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         // REFERENCES
         selectedCategory = "";
+        searchPage = new SearchPageActivity();
 
     }
     public void barsOption(View view){
@@ -59,5 +67,33 @@ public class MainActivity extends AppCompatActivity {
         Intent launchReport = new Intent(this, SearchPageActivity.class);
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        //Initialize menu inflater
+        MenuInflater menuInflater = getMenuInflater();
+        //Inflate menu
+        menuInflater.inflate(R.menu.menu_search,menu);
+        //Initialize menu item
+        MenuItem menuItem = menu.findItem(R.id.search_view);
+        // Initialize search view
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // filter array list
+                searchPage.categoryAdapter.getFilter().filter(newText);
+
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+
     }
 }
