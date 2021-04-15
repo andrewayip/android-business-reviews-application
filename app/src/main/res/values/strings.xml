@@ -25,4 +25,6 @@
     <string name="results_comments_image">User Profile Image</string>
     <string name="search_item_name">Business Name</string>
     <string name="search_item_description">Description</string>
+    <string name="results_review_title">Reviews</string>
+    <string name="results_description_title">Description</string>
 </resources>

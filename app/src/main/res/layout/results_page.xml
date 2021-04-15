@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff" >
@@ -11,8 +12,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/results_title"
-        android:textSize="24sp" />
+        android:textColor="@color/black"
+        android:textSize="36sp" />
 
     <ImageView
         android:id="@+id/resultsImageView"
@@ -20,6 +23,7 @@
         android:layout_height="129dp"
         android:layout_below="@+id/resultsTitleTxtV"
         android:layout_centerHorizontal="true"
+        android:foregroundGravity="fill"
         android:src="@drawable/ur_logo" />
 
     <TextView
@@ -29,26 +33,72 @@
         android:layout_below="@+id/resultsImageView"
         android:layout_alignLeft="@+id/resultsImageView"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="58dp"
+        android:fontFamily="sans-serif-condensed"
         android:isScrollContainer="true"
-        android:scrollbars="vertical"
         android:padding="30dp"
-        android:text="@string/results_description" />
+        android:scrollbars="vertical"
+        android:text="@string/results_description"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/gpsBtn"
         android:layout_width="85dp"
         android:layout_height="97dp"
-        android:text="@string/results_gps_button"
-        android:backgroundTint="@android:color/holo_red_dark"
         android:layout_below="@+id/resultsImageView"
-        android:layout_alignRight="@+id/resultsImageView" />
+        android:layout_alignRight="@+id/resultsImageView"
+        android:layout_marginTop="58dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="@string/results_gps_button"
+        app:backgroundTint="@color/black" />
 
     <ListView
         android:id="@+id/resultsCommentsListView"
         android:layout_width="328dp"
         android:layout_height="253dp"
-        android:contentDescription="@string/results_comments"
         android:layout_below="@+id/resultsDescriptionTextV"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:contentDescription="@string/results_comments" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultsDescriptionTextV"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginRight="233dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/results_review_title"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultsImageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginRight="170dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/results_description_title"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
 
 </RelativeLayout>
