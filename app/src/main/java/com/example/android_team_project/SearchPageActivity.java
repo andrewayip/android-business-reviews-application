@@ -7,9 +7,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.core.view.MenuItemCompat;
 
@@ -37,12 +39,20 @@ public class SearchPageActivity extends Activity {
     ArrayList<Location> allGym;
     ArrayList<Location> allHotels;
 
+    // SEARCH ARRAYLIST
+    ArrayList<Location> searchArray;
+
     // SELECTED ARRAY LIST
     ArrayList<Location> selectedCategoryList;
 
+    //
+    TextView searchTxt;
+    Button searchBtn;
 
     //INITIALIZE CATEGORY ADAPTER
     CategoryAdapter categoryAdapter;
+
+    String category;
 
     // NOW BASED ON WHAT CATEGORY WE SELECT WE DETERMINE WHICH HASHMAP TO DISPLAY (BASED ON CATEGORY)
 
@@ -60,8 +70,14 @@ public class SearchPageActivity extends Activity {
         allGym = new ArrayList<>();
         allHotels = new ArrayList<>();
 
+        searchArray = new ArrayList<>();
+
         // UI REFERENCES
         listView = (ListView) findViewById(R.id.listview);
+        searchTxt = findViewById(R.id.searchTxtView);
+        searchBtn = findViewById(R.id.searchBtn);
+
+
 
         //************************ ADD LOCATIONS TO PROPER DATA STRUCTURES ***********************
 
@@ -197,7 +213,6 @@ public class SearchPageActivity extends Activity {
         Intent intent = getIntent();
 
         // RETRIEVE CATEGORY DATA FROM MAIN ACTIVITY
-        String category;
         category = intent.getStringExtra("category"); // PASSED FROM MAIN ACTIVITY FILE
 
         //PASSES BUSINESS CATEGORY INTO CATEGORY ADAPTER
@@ -205,26 +220,32 @@ public class SearchPageActivity extends Activity {
             case "allBars":
                 categoryAdapter = new CategoryAdapter(this, allBars);
                 selectedCategoryList = allBars;
+                searchArray = allBars;
                 break;
             case "allBeauty":
                 categoryAdapter = new CategoryAdapter(this, allBeauty);
                 selectedCategoryList = allBeauty;
+                searchArray = allBeauty;
                 break;
             case "allEntertainment":
                 categoryAdapter = new CategoryAdapter(this, allEntertainment);
                 selectedCategoryList = allEntertainment;
+                searchArray = allEntertainment;
                 break;
             case "allFood":
                 categoryAdapter = new CategoryAdapter(this, allFood);
                 selectedCategoryList = allFood;
+                searchArray = allFood;
                 break;
             case "allHotels":
                 categoryAdapter = new CategoryAdapter(this, allHotels);
                 selectedCategoryList = allHotels;
+                searchArray = allHotels;
                 break;
             case "allGym":
                 categoryAdapter = new CategoryAdapter(this, allGym);
                 selectedCategoryList = allGym;
+                searchArray = allGym;
                 break;
         }
 
@@ -257,8 +278,49 @@ public class SearchPageActivity extends Activity {
 
       */
     }
+    /*
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        //Initialize menu inflater
+        MenuInflater menuInflater = getMenuInflater();
+        //Inflate menu
+        menuInflater.inflate(R.menu.menu_search,menu);
+        //Initialize menu item
+        MenuItem menuItem = menu.findItem(R.id.search_view);
+        // Initialize search view
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
 
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // filter array list
+                categoryAdapter.getFilter().filter(newText);
+
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+
+    }*/
+
+    public void searchButton(View view){
+
+        System.out.println("CALLED");
+        String searchQuery = searchTxt.getText().toString();
+        ArrayList<Location> searchResults = new ArrayList<>();
+
+        for(Location search: searchArray){
+            if(search.getName().toLowerCase().contains(searchQuery.toLowerCase())){
+                searchResults.add(search);
+            }
+        }
+        categoryAdapter = new CategoryAdapter(this, searchResults);
+    }
 
     // NEED TO IMPLEMENT CATEGORIZATION BASED ON SELECTION OF CATEGORY
 
