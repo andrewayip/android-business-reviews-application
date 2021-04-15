@@ -1,72 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <TextView
+        android:id="@+id/resultsTitleTxtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/results_title"
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/resultsImageView"
         android:layout_width="328dp"
         android:layout_height="129dp"
-        android:contentDescription="@string/results_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166"
-        app:srcCompat="@drawable/ur_logo" />
+        android:layout_below="@+id/resultsTitleTxtV"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ur_logo" />
 
     <TextView
         android:id="@+id/resultsDescriptionTextV"
         android:layout_width="216dp"
         android:layout_height="137dp"
-        android:padding="10dp"
+        android:padding="30dp"
         android:text="@string/results_description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.439" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/resultsImageView"
+        android:layout_alignLeft="@+id/resultsImageView"/>
 
     <Button
         android:id="@+id/gpsBtn"
         android:layout_width="85dp"
         android:layout_height="97dp"
         android:text="@string/results_gps_button"
-        app:backgroundTint="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.861"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:layout_below="@+id/resultsImageView"
+        android:layout_alignRight="@+id/resultsImageView" />
 
     <ListView
         android:id="@+id/resultsCommentsListView"
         android:layout_width="328dp"
         android:layout_height="253dp"
         android:contentDescription="@string/results_comments"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902" />
+        android:layout_below="@+id/resultsDescriptionTextV"
+        android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:id="@+id/resultsTitleTxtV"
-        android:layout_width="321dp"
-        android:layout_height="44dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/results_title"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
