@@ -291,17 +291,21 @@ public class SearchPageActivity extends Activity {
                 searchResults.add(search);
             }
         }
+        if(searchResults.size() ==0){
+            ArrayList<Location> newArray = new ArrayList<>();
+            newArray.add(new Location("No results","","","","",""));
+            categoryAdapter = new CategoryAdapter(this, newArray);
+        }
+        else{
+        for(Location test: searchResults) {
 
-        for(Location test: searchResults)
-
-        categoryAdapter = new CategoryAdapter(this, searchResults);
-
+            categoryAdapter = new CategoryAdapter(this, searchResults);
+        }
+        }
         updateListView();
-    }
 
-    // NEED TO IMPLEMENT CATEGORIZATION BASED ON SELECTION OF CATEGORY
 
-}
+}}
 
 
 
