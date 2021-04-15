@@ -299,10 +299,7 @@ public class SearchPageActivity extends Activity {
             categoryAdapter = new CategoryAdapter(this, newArray);
         }
         else{
-        for(Location test: searchResults) {
-
             categoryAdapter = new CategoryAdapter(this, searchResults);
-        }
         }
         updateListView();
 
