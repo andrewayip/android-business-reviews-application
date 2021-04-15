@@ -26,5 +26,5 @@
         android:paddingRight="10sp"
         android:paddingBottom="10sp"
         android:text="@string/search_item_description"
-        android:textSize="10sp" />
+        android:textSize="14sp" />
 </LinearLayout>
