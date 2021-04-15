@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">android_team_project</string>
+    <string name="app_name">Redlands Local Businesses</string>
     <string name="app_description">Our app is designed to help the Redland’s community find local businesses that satisfy their customer’s needs.</string>
     <string name="fitness">fitness</string>
     <string name="restaurants">restaurants</string>
@@ -23,4 +23,6 @@
     <string name="results_comments_title">Title</string>
     <string name="results_comments_body">Comment Body</string>
     <string name="results_comments_image">User Profile Image</string>
+    <string name="search_item_name">Business Name</string>
+    <string name="search_item_description">Description</string>
 </resources>
