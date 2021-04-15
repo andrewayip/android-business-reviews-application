@@ -26,11 +26,13 @@
         android:id="@+id/resultsDescriptionTextV"
         android:layout_width="216dp"
         android:layout_height="137dp"
-        android:padding="30dp"
-        android:text="@string/results_description"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/resultsImageView"
-        android:layout_alignLeft="@+id/resultsImageView"/>
+        android:layout_alignLeft="@+id/resultsImageView"
+        android:layout_centerHorizontal="true"
+        android:isScrollContainer="true"
+        android:scrollbars="vertical"
+        android:padding="30dp"
+        android:text="@string/results_description" />
 
     <Button
         android:id="@+id/gpsBtn"

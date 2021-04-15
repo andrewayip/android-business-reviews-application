@@ -1,6 +1,7 @@
 package com.example.android_team_project;
 
 import android.app.Activity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,8 @@ public class CommentAdapter extends ArrayAdapter<Comment> {
 
         TextView priceTitle = comment.findViewById(R.id.titleTxtV);
         TextView review = comment.findViewById(R.id.bodyTxtV);
+
+        review.setMovementMethod(new ScrollingMovementMethod()); // adding for scrolling
 
         priceTitle.setText(currentComment.getPrice());
         review.setText(currentComment.getReview());
