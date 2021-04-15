@@ -260,7 +260,9 @@ public class SearchPageActivity extends Activity {
             {
                 // ADD AN ITEM LISTENER FOR EACH LIST VIEW ITEM
                 Intent launchReport = new Intent(v.getContext(), ResultPageActivity.class);
-                launchReport.putExtra("item selected", selectedCategoryList.get(position).getName());
+                launchReport.putExtra("name", selectedCategoryList.get(position).getName());
+                launchReport.putExtra("description", selectedCategoryList.get(position).getDesc());
+                //launchReport.putExtra("imageURL", selectedCategoryList.get(position).get);
                 startActivity(launchReport);
 
             }
