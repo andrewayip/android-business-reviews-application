@@ -1,4 +1,4 @@
-package com.example.android_team_project;
+package com.example.android_team_project.models;
 
 public class Location {
 
@@ -8,27 +8,23 @@ public class Location {
     private String price;
     private String address;
     private String review;
-    private String imageID;
     private String imageURL;
 
-    // CONSTRUCTOR
     public Location () {
         name = "name";
         desc = "desc";
         price = "$";
         review = "review";
         address = "address";
-        imageID = "123";
         imageURL = "";
     }
 
-    public Location (String name, String desc, String address, String price, String review, String imageID, String imageURL){
+    public Location (String name, String desc, String address, String price, String review, String imageURL){
         this.name = name;
         this.desc = desc;
         this.price = price;
         this.review = review;
         this.address = address;
-        this.imageID = imageID;
         this.imageURL = imageURL;
     }
 
@@ -69,14 +65,6 @@ public class Location {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getImageID() {
-        return imageID;
-    }
-
-    public void setImageID(String imageID) {
-        this.imageID = imageID;
     }
 
     public String getImageURL() {

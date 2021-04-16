@@ -1,4 +1,4 @@
-package com.example.android_team_project;
+package com.example.android_team_project.utilities;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -7,9 +7,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.android_team_project.R;
+import com.example.android_team_project.models.Location;
+
 import java.util.ArrayList;
 
 public class CategoryAdapter extends ArrayAdapter<Location> {
+
     public CategoryAdapter(Activity context, ArrayList<Location> locations) {
         super(context, 0, locations);
     }

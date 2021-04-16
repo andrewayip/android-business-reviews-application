@@ -1,4 +1,4 @@
-package com.example.android_team_project;
+package com.example.android_team_project.models;
 
 public class Comment {
 

@@ -10,22 +10,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_team_project">
-        <activity android:name=".MainActivity">
+        <activity android:name=".controllers.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <!-- SECONDARY ACTIVITY CLASS: SEARCH PAGE ACTIVITY -->
-        <activity android:name=".SearchPageActivity"
+        <activity android:name=".controllers.SearchPageActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".controllers.MainActivity"/>
         <!-- THIRD ACTIVITY CLASS: RESULT PAGE ACTIVITY -->
-        <activity android:name=".ResultPageActivity"
+        <activity android:name=".controllers.ResultPageActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".SearchPageActivity"/>
+            android:parentActivityName=".controllers.SearchPageActivity"/>
         <meta-data android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity"/>
+            android:value=".controllers.MainActivity"/>
         />
     </application>
 

@@ -30,6 +30,6 @@
             android:padding="10dp"
             android:scrollbars="vertical"
             android:text="@string/results_comments_body"
-            android:textSize="30sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>

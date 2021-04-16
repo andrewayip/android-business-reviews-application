@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SearchPageActivity">
+    tools:context=".controllers.SearchPageActivity">
 
     <!-- set query string of an search view -->
 

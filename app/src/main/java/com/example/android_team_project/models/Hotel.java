@@ -1,14 +1,13 @@
-package com.example.android_team_project;
+package com.example.android_team_project.models;
 
 public class Hotel extends Location{
 
-    //  EXTENDS LOCATION SO IT HAS ALL THE SAME MEMBERS
     public Hotel() {
-        super(); // default constructor from Location class
+        super();
     }
 
-    public Hotel (String name, String desc, String address, String price, String review, String imageID, String imageURL){
-        super(name, desc, address, price, review, imageID, imageURL);
+    public Hotel (String name, String desc, String address, String price, String review, String imageURL){
+        super(name, desc, address, price, review, imageURL);
     }
 
     public void setName (String name){
@@ -28,9 +27,6 @@ public class Hotel extends Location{
     }
     public void setAddress (String address){
         super.setAddress(address);
-    }
-    public void setImageID (String imageID){
-        super.setImageID(imageID);
     }
     public void setImageURL(String imageURL) {super.setImageURL(imageURL);}
 

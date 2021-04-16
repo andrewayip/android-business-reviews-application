@@ -1,4 +1,4 @@
-package com.example.android_team_project;
+package com.example.android_team_project.controllers;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,7 +14,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.example.android_team_project.utilities.CommentAdapter;
+import com.example.android_team_project.R;
+import com.example.android_team_project.models.Comment;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,6 +28,7 @@ import java.util.ArrayList;
 
 public class ResultPageActivity extends Activity {
 
+    // DATA MEMBERS
     private TextView title;
     private TextView description;
     private ImageView imageView;
@@ -50,26 +53,29 @@ public class ResultPageActivity extends Activity {
         imageView = (ImageView) findViewById(R.id.resultsImageView);
         commentsListView = (ListView) findViewById(R.id.resultsCommentsListView);
 
-
+        // RETRIEVING DATA FROM INTENT (NAME, DESCRIPTION, IMAGE URL, RATING, PRICE, LOCATION - COORDINATES)
         Intent intent = getIntent();
         String nameData;
         nameData = intent.getStringExtra("name");
         String descriptionData;
         descriptionData = intent.getStringExtra("description");
 
-        // IMAGE URL, RATING, PRICE, location
         review = intent.getStringExtra("review");
         imgURL = intent.getStringExtra("imageURL");
         price = intent.getStringExtra("price");
         location = intent.getStringExtra("location");
         name = intent.getStringExtra("name");
 
+        // COMMENTS ADAPTER
         Comment c = new Comment(review, price);
         commentArrayList.add(c);
         commentAdapter = new CommentAdapter(this, commentArrayList);
         commentsListView.setAdapter(commentAdapter);
 
+        // RETRIEVING THE IMAGE VIA NETWORK
         getImage();
+
+        // SETTING DATA ON CREATE
         title.setText(nameData);
         description.setText(descriptionData);
 
