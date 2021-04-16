@@ -5,14 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/profileImage"
-        android:layout_width="309dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:contentDescription="@string/results_comments_image"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,14 +15,21 @@
             android:id="@+id/titleTxtV"
             android:layout_width="match_parent"
             android:layout_height="31dp"
+            android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_horizontal"
-            android:text="@string/results_comments_title" />
+            android:text="@string/results_comments_title"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/bodyTxtV"
             android:layout_width="match_parent"
             android:layout_height="98dp"
+            android:fontFamily="sans-serif-condensed"
+            android:isScrollContainer="true"
             android:padding="10dp"
-            android:text="@string/results_comments_body" />
+            android:scrollbars="vertical"
+            android:text="@string/results_comments_body"
+            android:textSize="30sp" />
     </LinearLayout>
 </LinearLayout>

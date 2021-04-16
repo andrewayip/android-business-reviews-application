@@ -9,6 +9,7 @@ public class Location {
     private String address;
     private String review;
     private String imageID;
+    private String imageURL;
 
     // CONSTRUCTOR
     public Location () {
@@ -18,15 +19,17 @@ public class Location {
         review = "review";
         address = "address";
         imageID = "123";
+        imageURL = "";
     }
 
-    public Location (String name, String desc, String address, String price, String review, String imageID){
+    public Location (String name, String desc, String address, String price, String review, String imageID, String imageURL){
         this.name = name;
         this.desc = desc;
         this.price = price;
         this.review = review;
         this.address = address;
         this.imageID = imageID;
+        this.imageURL = imageURL;
     }
 
     public String getName() {
@@ -74,5 +77,13 @@ public class Location {
 
     public void setImageID(String imageID) {
         this.imageID = imageID;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }
