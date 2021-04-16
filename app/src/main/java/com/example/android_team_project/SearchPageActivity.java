@@ -269,6 +269,7 @@ public class SearchPageActivity extends Activity {
                 launchReport.putExtra("imageURL", selectedCategoryList.get(position).getImageURL());
                 launchReport.putExtra("review", selectedCategoryList.get(position).getReview());
                 launchReport.putExtra("price", selectedCategoryList.get(position).getPrice());
+                launchReport.putExtra("location", selectedCategoryList.get(position).getAddress());
                 //launchReport.putExtra("imageURL", selectedCategoryList.get(position).get);
                 startActivity(launchReport);
 

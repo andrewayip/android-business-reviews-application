@@ -52,6 +52,7 @@
         android:background="#FFFFFF"
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="@string/results_gps_button"
+        android:onClick="mapOption"
         app:backgroundTint="@color/black" />
 
     <ListView

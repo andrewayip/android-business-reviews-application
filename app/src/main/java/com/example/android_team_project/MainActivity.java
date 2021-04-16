@@ -3,7 +3,10 @@ package com.example.android_team_project;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MenuItemCompat;
 
+import android.net.Uri;
 import android.os.Bundle;
+
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -66,5 +69,7 @@ public class MainActivity extends AppCompatActivity {
         launchReport.putExtra("category", selectedCategory);
         startActivity(launchReport);
     }
+
+
 
 }

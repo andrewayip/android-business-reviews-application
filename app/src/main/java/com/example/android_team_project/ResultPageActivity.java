@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.method.ScrollingMovementMethod;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,6 +35,8 @@ public class ResultPageActivity extends Activity {
     private ArrayList<Comment> commentArrayList = new ArrayList<Comment>();
     private CommentAdapter commentAdapter;
     private ListView commentsListView;
+    private String location;
+    private String name;
 
     @Override
     public void onCreate (Bundle savedInstanceState) {
@@ -46,16 +50,19 @@ public class ResultPageActivity extends Activity {
         imageView = (ImageView) findViewById(R.id.resultsImageView);
         commentsListView = (ListView) findViewById(R.id.resultsCommentsListView);
 
+
         Intent intent = getIntent();
         String nameData;
         nameData = intent.getStringExtra("name");
         String descriptionData;
         descriptionData = intent.getStringExtra("description");
 
-        // IMAGE URL, RATING, PRICE
+        // IMAGE URL, RATING, PRICE, location
         review = intent.getStringExtra("review");
         imgURL = intent.getStringExtra("imageURL");
         price = intent.getStringExtra("price");
+        location = intent.getStringExtra("location");
+        name = intent.getStringExtra("name");
 
         Comment c = new Comment(review, price);
         commentArrayList.add(c);
@@ -107,4 +114,12 @@ public class ResultPageActivity extends Activity {
             imageView.setImageBitmap((Bitmap) (msg.getData().getParcelable("bitmap")));
         }
     };
+
+    public void mapOption(View view){
+        //Uri gmmIntentUri = Uri.parse("geo:"+location+"10");
+        Uri gmmIntentUri = Uri.parse("geo:"+location+"?q="+name);
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
+    }
 }
