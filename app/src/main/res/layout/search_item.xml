@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/search_business_name"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:paddingLeft="10sp"
+        android:paddingTop="5sp"
+        android:paddingRight="10sp"
+        android:text="@string/search_item_name"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/search_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingBottom="10sp"
+        android:text="@string/search_item_description"
+        android:textSize="14sp" />
+</LinearLayout>
