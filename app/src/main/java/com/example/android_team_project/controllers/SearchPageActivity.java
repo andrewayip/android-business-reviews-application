@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.view.View;
+
 import com.example.android_team_project.utilities.CategoryAdapter;
 import com.example.android_team_project.R;
 import com.example.android_team_project.models.Bar;
@@ -279,13 +280,31 @@ public class SearchPageActivity extends Activity {
                 searchResults.add(search);
             }
         }
-        if(searchResults.size() ==0){
+        if(searchResults.size() == 0){
             ArrayList<Location> newArray = new ArrayList<>();
             newArray.add(new Location("No results","","","","", ""));
             categoryAdapter = new CategoryAdapter(this, newArray);
         }
         else{
             categoryAdapter = new CategoryAdapter(this, searchResults);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+            {
+                @Override
+                public void onItemClick(AdapterView<?> adapter, View v, int position,
+                                        long arg3)
+                {
+                    // ADD AN ITEM LISTENER FOR EACH LIST VIEW ITEM
+                    Intent launchReport = new Intent(v.getContext(), ResultPageActivity.class);
+                    launchReport.putExtra("name", searchResults.get(position).getName());
+                    launchReport.putExtra("description", searchResults.get(position).getDesc());
+                    launchReport.putExtra("imageURL", searchResults.get(position).getImageURL());
+                    launchReport.putExtra("review", searchResults.get(position).getReview());
+                    launchReport.putExtra("price", searchResults.get(position).getPrice());
+                    launchReport.putExtra("location", searchResults.get(position).getAddress());
+                    //launchReport.putExtra("imageURL", selectedCategoryList.get(position).get);
+                    startActivity(launchReport);
+                }
+            });
         }
         updateListView();
 }}
